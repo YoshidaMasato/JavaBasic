@@ -19,6 +19,12 @@ public class PTra06_05 {
 		 * ■■■■■
 		 * ■■■■■
 		 */
+		for(int i = 0; i < 25; i++) {
+			System.out.print("■");
 
+			if((i + 1) % 5 == 0) {
+				System.out.println();
+			}
+		}
 	}
 }

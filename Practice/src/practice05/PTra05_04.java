@@ -32,34 +32,29 @@ public class PTra05_04 {
 
 		String line = scanner.nextLine();
 
+		flg = true;
+
 			switch(line) {
 				case "0":
 					System.out.println("日曜");
-					flg = true;
 					break;
 				case "1":
 					System.out.println("月曜");
-					flg = true;
 					break;
 				case "2":
 					System.out.println("火曜");
-					flg = true;
 					break;
 				case "3":
 					System.out.println("水曜");
-					flg = true;
 					break;
 				case "4":
 					System.out.println("木曜");
-					flg = true;
 					break;
 				case "5":
 					System.out.println("金曜");
-					flg = true;
 					break;
 				case "6":
 					System.out.println("土曜");
-					flg = true;
 					break;
 				default:
 					flg = false;
