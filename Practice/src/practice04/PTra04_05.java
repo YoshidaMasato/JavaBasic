@@ -49,10 +49,8 @@ public class PTra04_05 {
 
 				switch (myHand) {
 				case 0:
-					//continue;
 					break;
 				case 1:
-					//continue;
 					break;
 				case 2:
 					winFlg = true;
@@ -68,10 +66,8 @@ public class PTra04_05 {
 					winFlg = true;
 					break;
 				case 1:
-					//continue;
 					break;
 				case 2:
-//					continue;
 					break;
 				}
 
@@ -80,13 +76,11 @@ public class PTra04_05 {
 				System.out.println("パー！！");
 				switch (myHand) {
 				case 0:
-					//continue;
 					break;
 				case 1:
 					winFlg = true;
 					break;
 				case 2:
-					//continue;
 					break;
 				}
 			}
