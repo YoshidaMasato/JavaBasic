@@ -8,31 +8,49 @@ package practice08;
 
 public class PTra08_05 {
 	public static void main(String[] args) {
-		// 入力型プログラムです。
-		// 下記の命令は、入力型プログラムで必要な記述になります。
-		java.util.Scanner scanner = new java.util.Scanner(System.in);
 
-		System.out.println("図形の横の長さを入力してください");
+		boolean flg = true;
 
-		// コマンドプロンプトで入力した数値が変数widthに代入されます
-		// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
-		int width = scanner.nextInt();
+		do {
+			flg = true;
+			// 入力型プログラムです。
+			// 下記の命令は、入力型プログラムで必要な記述になります。
+			java.util.Scanner scanner = new java.util.Scanner(System.in);
 
-		System.out.println("図形の縦の長さを入力してください");
+			System.out.println("図形の横の長さを入力してください");
 
-		// コマンドプロンプトで入力した数値が変数heightに代入されます
-		// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
-		int height = scanner.nextInt();
+			// コマンドプロンプトで入力した数値が変数widthに代入されます
+			// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
+			int width = scanner.nextInt();
 
-		System.out.println("図解の形を選択してください");
-		System.out.println("1:四角形   2:三角形");
+			System.out.println("図形の縦の長さを入力してください");
 
-		// コマンドプロンプトで入力した数値が変数heightに代入されます
-		// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
-		int choice = scanner.nextInt();
+			// コマンドプロンプトで入力した数値が変数heightに代入されます
+			// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
+			int height = scanner.nextInt();
 
-		// ★ 変数choiceの中が、1であれば四角形の面積を算出するメソッドを、2であれば三角形の面積を算出するメソッドを呼び出してください
+			System.out.println("図解の形を選択してください");
+			System.out.println("1:四角形   2:三角形");
 
+			// コマンドプロンプトで入力した数値が変数heightに代入されます
+			// ※ コマンドプロンプトで入力された値が、数字ではなかった場合はプログラムがエラーになります
+			int choice = scanner.nextInt();
+
+			// ★ 変数choiceの中が、1であれば四角形の面積を算出するメソッドを、2であれば三角形の面積を算出するメソッドを呼び出してください
+			switch (choice) {
+				case 1:
+					System.out.println(quadrangle(width,height));
+					break;
+				case 2:
+					System.out.println(triangle(width,height));
+					break;
+				default:
+					flg = false;
+					System.out.println("1か2を入力してください。");
+					break;
+			}
+		}
+		while(flg == false);
 	}
 
 	/*
@@ -44,7 +62,10 @@ public class PTra08_05 {
 	 *
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、四角形の面積を返すメソッド
 	 */
-
+	public static double quadrangle(double width,double height) {
+		double quadrangle = width * height;
+		return quadrangle;
+	}
 
 	/*
 	 * ★ 以下の仕様でメソッドを作成してください
@@ -55,5 +76,8 @@ public class PTra08_05 {
 	 *
 	 * 引数で渡された横の長さ(width)と縦の長さ(height)から、三角形の面積を返すメソッド
 	 */
-
+	public static double triangle(double width,double height) {
+		double triangle = width * height / 2;
+		return triangle;
+	}
 }
