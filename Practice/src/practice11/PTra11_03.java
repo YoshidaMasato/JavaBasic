@@ -20,16 +20,16 @@ public class PTra11_03 {
 		number += 1;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {	//クラスメソッド
 
 		// ★ sumメソッドを呼び出してください
-		PTra11_03 act = new PTra11_03();
+		PTra11_03 act = new PTra11_03();	//newでインスタンスを生成した直後にコンストラクタが実行される
 		act.sum(3,4);
 	}
 
-	public void sum(int x, int y) {
+	public void sum(int x, int y) {	//インスタンスメソッド
 		System.out.println("sumメソッドを呼び出しました。" + x + "＋" + y + "＝" + (x + y));
 
-		System.out.println("クラスフィールドnumber：" + number/* + ★ クラスフィールドnumberの出力をしてください */);
+		System.out.println("クラスフィールドnumber：" + PTra11_03.number/* + ★ クラスフィールドnumberの出力をしてください */);
 	}
 }
