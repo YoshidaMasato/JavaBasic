@@ -56,12 +56,11 @@ public class PTra05_03 {
 
 				default:
 					System.out.println("無効票です");
-					break;
 			}
 
 
 			// ★ 変数indexに1を足して、変数indexに代入してください
-			index += 1;
+			index ++;
 		}
 
 		// ★ 変数mountain、river、oceanの票数をそれぞれ出力してください

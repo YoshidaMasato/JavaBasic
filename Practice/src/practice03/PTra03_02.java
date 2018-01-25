@@ -16,7 +16,7 @@ public class PTra03_02 {
 		if(num >= 65) {
 			System.out.println("合格です");
 		} else {
-		System.out.println("不合格です");
+			System.out.println("不合格です");
 		}
 	}
 }

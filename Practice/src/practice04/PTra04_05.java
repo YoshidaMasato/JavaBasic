@@ -63,6 +63,8 @@ public class PTra04_05 {
 					System.out.println("あなたの勝ちです！");
 					winFlg = true;
 					break;
+				default:
+					System.out.println("判定出来ない！もう一回！");
 				}
 
 
@@ -85,6 +87,8 @@ public class PTra04_05 {
 					System.out.println("もう一回！");
 					System.out.println();
 					break;
+				default:
+					System.out.println("判定出来ない！もう一回！");
 				}
 
 
@@ -106,6 +110,8 @@ public class PTra04_05 {
 					System.out.println("もう一回！");
 					System.out.println();
 					break;
+				default:
+					System.out.println("判定出来ない！もう一回！");
 				}
 			}
 
