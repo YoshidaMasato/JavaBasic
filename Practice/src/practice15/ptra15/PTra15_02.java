@@ -13,7 +13,7 @@ public class PTra15_02 {
 	public static void main(String[] args) {
 
 		Room room = new Java2Month();
-		Java2Month java2Month = new Java2Month();
+		Java2Month java2Month = (Java2Month)room;
 
 		// roomに格納されたJava2MonthインスタンスのgetCurriculumメソッドを呼び出してください
 		String[] array = java2Month.getCurriculum();

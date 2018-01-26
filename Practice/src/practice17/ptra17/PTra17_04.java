@@ -16,8 +16,8 @@ public class PTra17_04 {
 		 * ※ Thread.sleep を使用すること
 		 */
 		char[] array = str.toCharArray();
-		for (int i = 0; i < str.length(); i++) {
-			System.out.print(array[i]);
+		for (char ch : array) {
+			System.out.print(ch);
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {

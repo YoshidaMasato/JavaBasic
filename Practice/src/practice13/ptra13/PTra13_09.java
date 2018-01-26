@@ -6,6 +6,7 @@
  */
 package practice13.ptra13;
 import practice13.common.Employee;
+import practice13.common.Person;
 
 public class PTra13_09 {
 
@@ -35,51 +36,28 @@ public class PTra13_09 {
 	public static void main(String[] args) {
 
 		// ★ 定数で定義されている各データを使用して、Employeeインスタンスを３つ作成してください
-		Employee employee1 = new Employee();
+		Employee[] employee = new Employee[NAMEDATA.length];
 
-		employee1.setUserNm(NAMEDATA[0]);
-		employee1.setMail(MAILDATA[0]);
-		employee1.setPassword(PASSDATA[0]);
-		employee1.setDepartmentNm(QUATERDATA[0][0]);
-		int i = Integer.parseInt(QUATERDATA[1][0]);
-		employee1.setDepartmentCnt(i);
+		for(int i = 0; i < employee.length; i++) {
+			employee[i] = new Employee();
+			employee[i].setUserId(Person.BASE_NO + i);
+			employee[i].setUserNm(NAMEDATA[i]);
+			employee[i].setMail(MAILDATA[i]);
+			employee[i].setPassword(PASSDATA[i]);
+			employee[i].setDepartmentNm(QUATERDATA[0][i]);
+			employee[i].setDepartmentCnt(Integer.parseInt(QUATERDATA[1][i]));
+		}
+
+		for(Employee emp : employee) {
+			System.out.println("---------------------------------");
+			System.out.println("ID:" + emp.getUserId());
+			System.out.println("名前：" + emp.getUserNm());
+			System.out.println("メールアドレス：" + emp.getMail());
+			System.out.println("パスワード：" + emp.getPassword());
+			System.out.println("部署：" + emp.getDepartmentNm());
+			System.out.println("部署人数：" + emp.getDepartmentCnt());
+		}
 
 
-		Employee employee2 = new Employee();
-
-		employee2.setUserNm(NAMEDATA[1]);
-		employee2.setMail(MAILDATA[1]);
-		employee2.setPassword(PASSDATA[1]);
-		employee2.setDepartmentNm(QUATERDATA[0][1]);
-		int j = Integer.parseInt(QUATERDATA[1][1]);
-		employee2.setDepartmentCnt(j);
-
-
-		Employee employee3 = new Employee();
-
-		employee3.setUserNm(NAMEDATA[2]);
-		employee3.setMail(MAILDATA[2]);
-		employee3.setPassword(PASSDATA[2]);
-		employee3.setDepartmentNm(QUATERDATA[0][2]);
-		int k = Integer.parseInt(QUATERDATA[1][2]);
-		employee3.setDepartmentCnt(k);
-
-		System.out.println(employee1.getUserNm());
-		System.out.println(employee1.getMail());
-		System.out.println(employee1.getPassword());
-		System.out.println(employee1.getDepartmentNm());
-		System.out.println(employee1.getDepartmentCnt());
-		System.out.println();
-		System.out.println(employee2.getUserNm());
-		System.out.println(employee2.getMail());
-		System.out.println(employee2.getPassword());
-		System.out.println(employee2.getDepartmentNm());
-		System.out.println(employee2.getDepartmentCnt());
-		System.out.println();
-		System.out.println(employee3.getUserNm());
-		System.out.println(employee3.getMail());
-		System.out.println(employee3.getPassword());
-		System.out.println(employee3.getDepartmentNm());
-		System.out.println(employee3.getDepartmentCnt());
 	}
 }

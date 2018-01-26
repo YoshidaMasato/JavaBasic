@@ -29,7 +29,7 @@ public class PTra18_01 {
 		// ★ ArrayListに格納された値を全て表示してください
 		// ※ できれば拡張for文を使いましょう
         for(String str : array) {
-        	System.out.println(str);
+        	System.out.println(str.replaceAll(",", "\t"));
         }
 	}
 }
